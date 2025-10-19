@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const wildcardBtn = document.getElementById("wildcardBtn");
   const specificBtn = document.getElementById("specificBtn");
   const extensionsBtn = document.getElementById("extensionsBtn");
+  const toast = document.getElementById("toast");
 
   // Set current tab URL by default
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -13,11 +14,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Show toast notification
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.add("show");
+    setTimeout(() => {
+      toast.classList.remove("show");
+    }, 3000);
+  }
+
+  // Set button loading state
+  function setButtonLoading(button, isLoading) {
+    if (isLoading) {
+      button.classList.add("loading");
+    } else {
+      button.classList.remove("loading");
+    }
+  }
+
   function openWaybackURL(type) {
-    const urlToInsert = urlInput.value.trim();
-    if (!urlToInsert) return;
+    let urlToInsert = urlInput.value.trim();
+    if (!urlToInsert) {
+      showToast("Please enter a URL");
+      return;
+    }
+
+    // Check if the URL has a protocol, if not add https://
+    if (!urlToInsert.match(/^https?:\/\//i)) {
+      urlToInsert = "https://" + urlToInsert;
+    }
 
     let finalURL = "";
+    let button;
 
     try {
       const parsedURL = new URL(urlToInsert);
@@ -27,22 +55,34 @@ document.addEventListener("DOMContentLoaded", () => {
       if (type === "wildcard") {
         // *.domain.com/*
         finalURL = `https://web.archive.org/cdx/search/cdx?url=*.${hostname}/*&collapse=urlkey&output=text&fl=original`;
+        button = wildcardBtn;
       } else if (type === "domain") {
         // domain.com/*
         finalURL = `https://web.archive.org/cdx/search/cdx?url=${hostname}/*&collapse=urlkey&output=text&fl=original`;
+        button = domainBtn;
       } else if (type === "specific") {
         // full path
         finalURL = `https://web.archive.org/cdx/search/cdx?url=${fullURL}/*&collapse=urlkey&output=text&fl=original`;
+        button = specificBtn;
       } else if (type === "extensions") {
         // Files with specific extensions
         finalURL = `https://web.archive.org/cdx/search/cdx?url=*.${hostname}/*&collapse=urlkey&output=text&fl=original&filter=original:.*\.(xls|xml|xlsx|json|pdf|sql|doc|docx|pptx|txt|zip|tar\.gz|tgz|bak|7z|rar|log|cache|secret|db|backup|yml|gz|git|config|csv|yaml|md|md5|exe|dll|bin|ini|bat|sh|tar|deb|rpm|iso|img|apk|msi|env|dmg|tmp|crt|pem|key|pub|asc)$`;
+        button = extensionsBtn;
       }
+
+      // Set loading state
+      setButtonLoading(button, true);
+
+      // Open the URL after a short delay to show loading state
+      setTimeout(() => {
+        chrome.tabs.create({ url: finalURL });
+        setButtonLoading(button, false);
+        showToast("Opening Wayback Machine...");
+      }, 500);
     } catch {
-      alert("Invalid URL format. Please enter a valid URL.");
+      showToast("Invalid URL format. Please enter a valid URL.");
       return;
     }
-
-    chrome.tabs.create({ url: finalURL });
   }
 
   domainBtn.addEventListener("click", () => openWaybackURL("domain"));
