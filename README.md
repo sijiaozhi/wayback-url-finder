@@ -17,7 +17,7 @@ A Chrome extension that helps you quickly discover archived URLs from the Waybac
 
 1. Download or clone this repository:
    ```bash
-   git clone https://github.com/yourusername/wayback-url-finder.git
+   git clone https://github.com/coffinxp/wayback-url-finder.git
    ```
 
 2. Open Chrome and navigate to `chrome://extensions/`
