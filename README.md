@@ -63,7 +63,8 @@ https://web.archive.org/cdx/search/cdx?url=*.example.com/*&collapse=urlkey&outpu
 
 ## Screenshots
 
-*(Add screenshots of your extension in action)*
+<img width="366" height="521" alt="Screenshot 2025-10-19 091726" src="https://github.com/user-attachments/assets/646fe87c-8693-44a5-8c75-8012b77e0ae0" />
+
 
 ## Contributing
 
