@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Wayback URLs Finder</title>
+  <title>Wayback URL Finder</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -12,7 +12,8 @@
       padding: 0;
     }
 
-    body {
+    /* --- CHANGE: Apply cursor to body and ALL elements within it --- */
+    body, body * {
       font-family: 'Inter', sans-serif;
       background: #0d0d0d; /* solid matte black */
       color: #eaeaea;
@@ -25,8 +26,22 @@
       overflow: hidden;
       position: relative;
       border: 1px solid rgba(255, 140, 0, 0.1);
+      cursor: url('images/cursor-blue.cur'), auto;
     }
 
+    /* --- IMPORTANT: Reset background and other properties for child elements --- */
+    body * {
+      background: transparent;
+      padding: 0;
+      margin: initial;
+      border-radius: initial;
+      box-shadow: initial;
+      border: initial;
+      text-align: initial;
+      width: initial;
+      color: #eaeaea; /* Reset color for children */
+    }
+    
     /* Subtle background pattern */
     body::before {
       content: '';
@@ -123,7 +138,7 @@
       margin: 6px 0;
       border: none;
       border-radius: 6px;
-      cursor: pointer;
+      /* --- REMOVED: cursor: pointer; --- */
       font-weight: 600;
       font-size: 14px;
       color: #fff;
@@ -314,6 +329,7 @@
       font-weight: 600;
       position: relative;
       transition: color 0.2s;
+      /* --- REMOVED: cursor: pointer; --- */
     }
 
     footer a::after {
